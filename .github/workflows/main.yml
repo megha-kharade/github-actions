@@ -1,4 +1,4 @@
-name: deploy lambda
+name: deploy lambdas
 
 on: 
   push:
@@ -31,16 +31,16 @@ jobs:
       - name: Install Lambda dependencies
         run: |
           mkdir -p ../package
-          pip install -r ../lambda/requirements.txt -t ../package
+          pip install -r ../lambdas/requirements.txt -t ../package
 
       - name: Copy Lambda source
         run: |
-          cp -r ../lambda/* ../package/
+          cp -r ../lambdas/* ../package/
 
       - name: Create Lambda ZIP
         run: |
           cd ../package
-          zip -r ../lambda.zip .
+          zip -r ../lambdas.zip .
 
       - name: Terraform Init
         working-directory: terraform
