@@ -33,7 +33,7 @@ resource "aws_lambda_function" "test-github-actions" {
 
   filename = "../lambda.zip"
 
-  source_code_hash = filebase64sha256("../lambdas.zip")
+  source_code_hash = filebase64sha256("../lambda.zip")
 
   handler = "lambda_function.lambda_handler"
 
