@@ -27,6 +27,13 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      
+      - name: Debug repository structure
+        run: |
+          pwd
+          ls -la
+          ls -la ..
+          find .. -name requirements.txt
 
       - name: Install Lambda dependencies
         run: |
