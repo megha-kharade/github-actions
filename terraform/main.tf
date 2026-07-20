@@ -27,13 +27,13 @@ resource "aws_iam_role" "lambda_role" {
   })
 }
 
-resource "aws_lambda_function" "incident" {
+resource "aws_lambda_function" "test-github-actions" {
 
   function_name = "test-github-actions"
 
-  filename = "../github-actions/lambda.zip"
+  filename = "../github-actions/lambdas.zip"
 
-  source_code_hash = filebase64sha256("../github-actions/lambda.zip")
+  source_code_hash = filebase64sha256("../github-actions/lambdas.zip")
 
   handler = "lambda_function.lambda_handler"
 
