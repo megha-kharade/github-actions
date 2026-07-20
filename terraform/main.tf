@@ -33,7 +33,7 @@ resource "aws_lambda_function" "incident" {
 
   filename = "../github-actions/lambda.zip"
 
-  source_code_hash = filebase64sha256("../lambda.zip")
+  source_code_hash = filebase64sha256("../github-actions/lambda.zip")
 
   handler = "lambda_function.lambda_handler"
 
