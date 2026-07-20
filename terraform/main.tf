@@ -31,7 +31,7 @@ resource "aws_lambda_function" "incident" {
 
   function_name = "incident-management"
 
-  filename = "../lambda.zip"
+  filename = "../github-actions/lambda.zip"
 
   source_code_hash = filebase64sha256("../lambda.zip")
 
