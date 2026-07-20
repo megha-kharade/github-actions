@@ -20,7 +20,3 @@ def lambda_handler(event, context):
         "statusCode": 200,
         "body": "Success"
     }
-
-if __name__ == "__main__":
-    response = lambda_handler({}, None)
-    print(response)
