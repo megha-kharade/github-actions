@@ -37,17 +37,17 @@ jobs:
 
       - name: Install Lambda dependencies
         run: |
-          mkdir -p ../package
-          pip install -r ../github-actions/lambdas/requirements.txt -t ../package
+          mkdir -p package
+          pip install -r lambdas/requirements.txt -t package
 
       - name: Copy Lambda source
         run: |
-          cp -r ../github-actions/lambdas/* ../package/
+          cp -r lambdas/* package/
 
       - name: Create Lambda ZIP
         run: |
-          cd ../package
-          zip -r ../github-actions/lambdas.zip .
+          cd package
+          zip -r ../lambda.zip .
 
       - name: Terraform Init
         working-directory: terraform
