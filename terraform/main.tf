@@ -29,7 +29,7 @@ resource "aws_iam_role" "lambda_role" {
 
 resource "aws_lambda_function" "incident" {
 
-  function_name = "incident-management"
+  function_name = "test-github-actions"
 
   filename = "../github-actions/lambda.zip"
 
